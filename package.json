@@ -4,16 +4,11 @@
   "description": "",
   "main": "server.js",
   "type": "module",
-  "engines":{
-    "node": "18.17.1",
-    "npm": "9.6.7"
-  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "client-install": "cd client && npm install",
-    "client-build": "cd client && npm run build",
-    "heroku-postbuild": "npm run client-install && npm run client-build"
+    "start": "node server.js"
+    
   },
   "author": "prayag satpute",
   "license": "ISC",

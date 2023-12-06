@@ -15,17 +15,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', Router);
 
+const port = 8000;
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
-const port = process.env.PORT || 8000;
-const URI = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@ecommerce-web.wdk5xyt.mongodb.net/?retryWrites=true&w=majority`;
-
-Connection(URI);
-
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'))
-}
+Connection(USERNAME, PASSWORD);
 
 app.listen(port, () => console.log(`Server is running on ${port} hello`));
 

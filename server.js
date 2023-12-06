@@ -19,7 +19,7 @@ const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
 const port = process.env.PORT || 8000;
-const URI = process.env.MONGODB.URI || `mongodb+srv://${USERNAME}:${PASSWORD}@ecommerce-web.wdk5xyt.mongodb.net/?retryWrites=true&w=majority`;
+const URI = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@ecommerce-web.wdk5xyt.mongodb.net/?retryWrites=true&w=majority`;
 
 Connection(URI);
 
